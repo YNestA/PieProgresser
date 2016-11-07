@@ -6,31 +6,51 @@
   bottom: 0;
   top: 0;
   border-radius: 50%;
-  background-color: lightcyan;
-  width: 300px;
-  height: 300px;
-  background-image: -webkit-linear-gradient(left, transparent 50%, maroon 50%);
+  background-color: #c9ba83;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 2px white;
+  background-image: -webkit-linear-gradient(left, transparent 50%, #823935 50%);
   /* Safari 5.1 - 6.0 */
-  background-image: -o-linear-gradient(right, transparent 50%, maroon 50%);
+  background-image: -o-linear-gradient(right, transparent 50%, #823935 50%);
   /* Opera 11.1 - 12.0 */
-  background-image: -moz-linear-gradient(right, transparent 50%, maroon 50%);
+  background-image: -moz-linear-gradient(right, transparent 50%, #823935 50%);
   /* Firefox 3.6 - 15 */
-  background-image: linear-gradient(to right, transparent 50%, maroon 50%);
+  background-image: linear-gradient(to right, transparent 50%, #823935 50%);
   /* 标准的语法 */
 }
-#my_pie_progresser::before {
-  content: "";
+#my_pie_progresser span.right_progress,
+#my_pie_progresser span.left_progress {
+  position: absolute;
   width: 50%;
   margin-left: 50%;
   height: 100%;
-  background-color: inherit;
-  background-clip: border-box;
   display: block;
-  border: 1px solid lightcyan;
   border-top-left-radius: 0 0;
   border-top-right-radius: 100% 50%;
   border-bottom-right-radius: 100% 50%;
   border-bottom-left-radius: 0 0;
   transform-origin: 0 50%;
-  transform: rotate(210deg);
+}
+#my_pie_progresser span.right_progress {
+  background-color: inherit;
+}
+#my_pie_progresser span.left_progress {
+  background-color: transparent;
+}
+#my_pie_progresser div.progress_num {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 82%;
+  height: 82%;
+  border-radius: 50%;
+  background-color: #e3e6d2;
+  text-align: center;
+  font-size: 25px;
+  line-height: 82px;
+  color: #823935;
 }
