@@ -1,27 +1,42 @@
-
-.pie_progresser(@side_length;@b_color;@p_color){
+.pie_progresser(@side_length;@b_color;@p_color;@count_b_color;@count_color){
   border-radius: 50%;
   background-color: @b_color;
   width: @side_length;
   height: @side_length;
+  box-shadow: 0 0 2px white;
   background-image: -webkit-linear-gradient(left,transparent 50% , @p_color 50% ); /* Safari 5.1 - 6.0 */
   background-image: -o-linear-gradient(right, transparent 50% , @p_color 50%); /* Opera 11.1 - 12.0 */
   background-image: -moz-linear-gradient(right, transparent 50% , @p_color 50%); /* Firefox 3.6 - 15 */
   background-image: linear-gradient(to right, transparent 50% , @p_color 50%); /* 标准的语法 */
-  span.progress{
+  span.right_progress,span.left_progress{
+    position:absolute;
     width: 50%;
     margin-left: 50%;
     height: 100%;
-    background-color: inherit;
-    background-clip: border-box;
     display: block;
-    border: 1px solid @b_color;
     border-top-left-radius: 0 0;
     border-top-right-radius: 100% 50%;
     border-bottom-right-radius: 100% 50%;
     border-bottom-left-radius:  0 0;
     transform-origin: 0 50%;
-    transition: transform 0.5s linear;
-    transform: rotate(20deg);
+  };
+  span.right_progress{
+    background-color:inherit;
+  };
+  span.left_progress{
+    background-color:transparent;
+  };
+  div.progress_num{
+    position: absolute;
+    margin: auto;
+    left: 0;right: 0;top:0;bottom: 0;
+    width: 82%;
+    height: 82%;
+    border-radius: 50%;
+    background-color:@count_b_color;
+    text-align: center;
+    font-size: (@side_length / 4);
+    line-height: (@side_length * 0.82);
+    color:@count_color;
   }
 }

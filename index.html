@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>PieProgresser</title>
-    <!--
     <link rel="stylesheet" type="text/css" href="index.css">
-    -->
-    <link rel="stylesheet" type="text/less" href="index.less">
+    <!--<link rel="stylesheet/less" type="text/css" href="index.less">-->
 </head>
 <body>
-    <div id="my_pie_progresser"><span class="progress"></span></div>
+    <div id="my_pie_progresser" data-angle="0">
+        <span class="left_progress"></span>
+        <span class="right_progress"></span>
+        <div class="progress_num">100%</div>
+    </div>
     <script type="text/javascript" src="PieProgresser/js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="less.min.js"></script>
     <script type="text/javascript" src="PieProgresser/js/PieProgress.js"></script>
